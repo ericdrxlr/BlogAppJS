@@ -1,0 +1,27 @@
+<%- include ("partials/header") %>
+
+
+<div class="ui main text container">
+	<div class="ui huge header">University Heights Shul App</div>
+		<div class="ui top attached segment">
+			<div class="ui divided items">
+				<%	blogs.forEach((blog) => { %>
+				<div class="item">
+					<div class="image">
+						<img class="ui centered rounded image" src="<%= blog.image %>">	
+					</div>
+					<div class="content">
+						<h2>  <%= blog.shul %> </h2>
+						<h3>  <%= blog.rabbi %> </h3>
+					</div>
+					<br><div class="extra">
+						<a class="ui floated inverted primary button" href="/blogs/<%= blog._id %>">Read More</a>
+					</div>
+				</div>
+				<%	}); %> 
+			</div>	
+		</div>
+</div>
+
+<%- include ("partials/footer") %>
+
